@@ -1,7 +1,7 @@
 {
   "name": "text-editor-app",
   "version": "0.1.0",
-  "homepage": "https://myusername.github.io/text-editor-app",
+  "homepage": "https://osquibb.github.io/text-editor-app",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
