@@ -7,12 +7,13 @@ export default class EditorCell extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editorState: EditorState.createEmpty()
+      editorState: EditorState.createEmpty(),
+      currentTitle: "Untitled",
+      modal: false
     };
     this.onChange = (editorState) => this.setState({editorState});
     this.handleKeyCommand = this.handleKeyCommand.bind(this);
   }
-
 
   handleKeyCommand(command, editorState) {
     const newState = RichUtils.handleKeyCommand(editorState, command);
@@ -22,6 +23,7 @@ export default class EditorCell extends Component {
     }
     return 'not-handled';
   }
+
   _onBoldClick(e) {
     this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
     e.preventDefault();
@@ -44,7 +46,7 @@ export default class EditorCell extends Component {
     return (
       <Container>
         <Row>
-          <Col xs="2">
+          <Col xs="2" style={{marginLeft: "-4%"}}>
             <Button color="none" 
                     className={currentStyles.has('BOLD') ? "text-info font-weight-bold" : "text-info font-weight-light"} 
                     block 
