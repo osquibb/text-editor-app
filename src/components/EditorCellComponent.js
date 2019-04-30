@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import {Editor, EditorState, RichUtils} from 'draft-js';
+import React, { Component } from 'react';
+import {Editor, RichUtils} from 'draft-js';
 import { Container, Row, Col, Button } from 'reactstrap';
 import 'draft-js/dist/Draft.css'
 
@@ -12,7 +12,7 @@ export default class EditorCell extends Component {
   handleKeyCommand(command, editorState) {
     const newState = RichUtils.handleKeyCommand(editorState, command);
     if (newState) {
-      this.onChange(newState);
+      this.props.onChange(newState);
       return 'handled';
     }
     return 'not-handled';

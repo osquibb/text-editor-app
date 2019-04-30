@@ -18,6 +18,8 @@ export default class TextEditorApp extends Component {
     this.onChange = (editorState) => this.setState({editorState});
     this.toggleModal = this.toggleModal.bind(this);
     this.saveDoc = this.saveDoc.bind(this);
+    this.loadDoc = this.loadDoc.bind(this);
+    this.deleteDoc = this.deleteDoc.bind(this);
   }
 
   toggleModal() {
@@ -43,6 +45,19 @@ export default class TextEditorApp extends Component {
     }
   }
 
+  loadDoc(doc) {
+    this.setState({currentTitle: doc.title});
+    this.setState({editorState: EditorState.createWithContent(doc.content)});
+  }
+
+  deleteDoc(doc) {
+    const savedDocs = this.state.savedDocs;
+    if (savedDocs.indexOf(doc) !== -1) {
+        savedDocs.splice(savedDocs.indexOf(doc));
+      }
+    this.setState({savedDocs});
+  }
+
   render() {
     return (
       <Fragment>
@@ -55,7 +70,10 @@ export default class TextEditorApp extends Component {
               <SaveButton onClick={this.toggleModal} />
             </Col>
             <Col xs="4">
-              <SavedDocs savedDocs={this.state.savedDocs} />
+              <SavedDocs savedDocs={this.state.savedDocs}
+                         loadDoc={this.loadDoc}
+                         deleteDoc={this.deleteDoc} 
+              />
             </Col>
           </Row>
         </Container>
