@@ -6,12 +6,6 @@ import 'draft-js/dist/Draft.css'
 export default class EditorCell extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      editorState: EditorState.createEmpty(),
-      currentTitle: "Untitled",
-      modal: false
-    };
-    this.onChange = (editorState) => this.setState({editorState});
     this.handleKeyCommand = this.handleKeyCommand.bind(this);
   }
 
@@ -25,23 +19,23 @@ export default class EditorCell extends Component {
   }
 
   _onBoldClick(e) {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
+    this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'BOLD'));
     e.preventDefault();
   }
 
   _onItalicClick(e) {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'));
+    this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'ITALIC'));
     e.preventDefault();
   }
 
   _onUnderlineClick(e) {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINE'));
+    this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'UNDERLINE'));
     e.preventDefault();
   }
 
   render() {
 
-    const currentStyles = this.state.editorState.getCurrentInlineStyle();
+    const currentStyles = this.props.editorState.getCurrentInlineStyle();
 
     return (
       <Container>
@@ -75,9 +69,9 @@ export default class EditorCell extends Component {
           <Col xs="12" style={{height: "160px", border: "1px solid #e8e8e8"}}>
             <Editor
               placeholder="Type away..."
-              editorState={this.state.editorState}
+              editorState={this.props.editorState}
               handleKeyCommand={this.handleKeyCommand}
-              onChange={this.onChange}
+              onChange={this.props.onChange}
             />
           </Col>
         </Row>
