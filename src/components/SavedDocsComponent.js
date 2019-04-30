@@ -4,11 +4,10 @@ import { Button, Container, Col, Row, ListGroup, ListGroupItem } from 'reactstra
 function SavedDocsList(props) {
   return props.savedDocs.map(doc => {
     return(
-      <ListGroupItem key={doc.title}
-                     onClick={() => props.loadDoc(doc)}
+      <ListGroupItem key={doc.key}
                      style={{borderRadius: "0px", border: "1px solid #e8e8e8"}}>
-        <i onClick={() => props.deleteDoc(doc)} className="fa fa-trash text-secondary mr-3"></i>
-        {doc.title}
+        <i onClick={() => props.deleteDoc(doc.key)} className="fa fa-trash text-secondary mr-3"></i>
+        <span onClick={() => props.loadDoc(doc)}>{doc.title}</span>
       </ListGroupItem>
     );
   });

@@ -13,9 +13,11 @@ export default class TextEditorApp extends Component {
       modal: false,
       currentTitle: 'Untitled',
       editorState: EditorState.createEmpty(),
-      savedDocs: []
+      savedDocs: [],
+      docKey: 0
     };
     this.onChange = (editorState) => this.setState({editorState});
+
     this.toggleModal = this.toggleModal.bind(this);
     this.saveDoc = this.saveDoc.bind(this);
     this.loadDoc = this.loadDoc.bind(this);
@@ -36,11 +38,13 @@ export default class TextEditorApp extends Component {
       const doc = {};
       doc.title = this.state.currentTitle;
       doc.content = this.state.editorState.getCurrentContent();
+      doc.key = this.state.docKey;
       const savedDocs = this.state.savedDocs;
       savedDocs.push(doc);
       this.setState({savedDocs});
       this.setState({currentTitle: 'Untitled'});
-      this.setState({editorState: EditorState.createEmpty()})
+      this.setState({editorState: EditorState.createEmpty()});
+      this.setState(prevState => ({docKey: prevState.docKey + 1}));
       this.toggleModal();
     }
   }
@@ -50,12 +54,15 @@ export default class TextEditorApp extends Component {
     this.setState({editorState: EditorState.createWithContent(doc.content)});
   }
 
-  deleteDoc(doc) {
-    const savedDocs = this.state.savedDocs;
-    if (savedDocs.indexOf(doc) !== -1) {
-        savedDocs.splice(savedDocs.indexOf(doc));
+  deleteDoc(docKey) {
+    let savedDocs = this.state.savedDocs;
+    for (let i in savedDocs) {
+      if (savedDocs[i].key === docKey) {
+        savedDocs.splice(i,1);
       }
+    }
     this.setState({savedDocs});
+    this.setState({editorState: EditorState.createEmpty()});
   }
 
   render() {
