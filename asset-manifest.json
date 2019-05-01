@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/text-editor-app/static/css/main.795991f2.chunk.css",
-    "main.js": "/text-editor-app/static/js/main.6439e395.chunk.js",
-    "main.js.map": "/text-editor-app/static/js/main.6439e395.chunk.js.map",
+    "main.js": "/text-editor-app/static/js/main.918f29a7.chunk.js",
+    "main.js.map": "/text-editor-app/static/js/main.918f29a7.chunk.js.map",
     "runtime~main.js": "/text-editor-app/static/js/runtime~main.35563332.js",
     "runtime~main.js.map": "/text-editor-app/static/js/runtime~main.35563332.js.map",
     "static/css/2.7daadf64.chunk.css": "/text-editor-app/static/css/2.7daadf64.chunk.css",
     "static/js/2.90535e87.chunk.js": "/text-editor-app/static/js/2.90535e87.chunk.js",
     "static/js/2.90535e87.chunk.js.map": "/text-editor-app/static/js/2.90535e87.chunk.js.map",
     "index.html": "/text-editor-app/index.html",
-    "precache-manifest.f8cb5554f6cdaa0475f3281df16ff316.js": "/text-editor-app/precache-manifest.f8cb5554f6cdaa0475f3281df16ff316.js",
+    "precache-manifest.881267707cf8b29c91f59554debb5032.js": "/text-editor-app/precache-manifest.881267707cf8b29c91f59554debb5032.js",
     "service-worker.js": "/text-editor-app/service-worker.js",
     "static/css/2.7daadf64.chunk.css.map": "/text-editor-app/static/css/2.7daadf64.chunk.css.map",
     "static/css/main.795991f2.chunk.css.map": "/text-editor-app/static/css/main.795991f2.chunk.css.map",
