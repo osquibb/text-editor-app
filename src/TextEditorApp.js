@@ -44,7 +44,7 @@ export default class TextEditorApp extends Component {
       savedDocs.push(doc);
       this.setState({savedDocs});
       this.setState({currentTitle: 'Untitled'});
-      this.setState({currentDocKey: doc.key});
+      this.setState({currentDocKey: null});
       this.setState({editorState: EditorState.createEmpty()});
       this.setState(prevState => ({nextDocKey: prevState.nextDocKey + 1}));
       this.toggleModal();
