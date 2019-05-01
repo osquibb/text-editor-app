@@ -12,9 +12,10 @@ export default class TextEditorApp extends Component {
     this.state = {
       modal: false,
       currentTitle: 'Untitled',
+      currentDocKey: 0,
       editorState: EditorState.createEmpty(),
       savedDocs: [],
-      docKey: 0
+      nextDocKey: 0
     };
     this.onChange = (editorState) => this.setState({editorState});
 
@@ -38,19 +39,21 @@ export default class TextEditorApp extends Component {
       const doc = {};
       doc.title = this.state.currentTitle;
       doc.content = this.state.editorState.getCurrentContent();
-      doc.key = this.state.docKey;
+      doc.key = this.state.nextDocKey;
       const savedDocs = this.state.savedDocs;
       savedDocs.push(doc);
       this.setState({savedDocs});
       this.setState({currentTitle: 'Untitled'});
+      this.setState({currentDocKey: doc.key});
       this.setState({editorState: EditorState.createEmpty()});
-      this.setState(prevState => ({docKey: prevState.docKey + 1}));
+      this.setState(prevState => ({nextDocKey: prevState.nextDocKey + 1}));
       this.toggleModal();
     }
   }
 
   loadDoc(doc) {
     this.setState({currentTitle: doc.title});
+    this.setState({currentDocKey: doc.key})
     this.setState({editorState: EditorState.createWithContent(doc.content)});
   }
 
@@ -79,7 +82,8 @@ export default class TextEditorApp extends Component {
             <Col xs="4">
               <SavedDocs savedDocs={this.state.savedDocs}
                          loadDoc={this.loadDoc}
-                         deleteDoc={this.deleteDoc} 
+                         deleteDoc={this.deleteDoc}
+                         currentDocKey={this.state.currentDocKey} 
               />
             </Col>
           </Row>

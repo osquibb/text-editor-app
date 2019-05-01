@@ -7,7 +7,7 @@ function SavedDocsList(props) {
       <ListGroupItem key={doc.key}
                      style={{borderRadius: "0px", border: "1px solid #e8e8e8"}}>
         <i onClick={() => props.deleteDoc(doc.key)} className="fa fa-trash text-secondary mr-3"></i>
-        <span onClick={() => props.loadDoc(doc)}>{doc.title}</span>
+        <span className={doc.key === props.currentDocKey ? "font-weight-bold" : null } onClick={() => props.loadDoc(doc)}>{doc.title}</span>
       </ListGroupItem>
     );
   });
@@ -28,6 +28,7 @@ export default class SavedDocs extends Component {
             <SavedDocsList savedDocs={this.props.savedDocs} 
                            loadDoc={this.props.loadDoc}
                            deleteDoc={this.props.deleteDoc}
+                           currentDocKey={this.props.currentDocKey}
             />
           </ListGroup>
         </Row>
