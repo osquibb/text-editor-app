@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c0934b2abdfb24cadf41d51aabca43b1",
+    "revision": "18c53ed65fcf932945001065c5715698",
     "url": "/text-editor-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/text-editor-app/static/css/2.7daadf64.chunk.css"
   },
   {
-    "revision": "a74e4fa42b1c70cf24af",
+    "revision": "32ab5b3ee4c52b80b5fa",
     "url": "/text-editor-app/static/css/main.795991f2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/text-editor-app/static/js/2.90535e87.chunk.js"
   },
   {
-    "revision": "a74e4fa42b1c70cf24af",
-    "url": "/text-editor-app/static/js/main.918f29a7.chunk.js"
+    "revision": "32ab5b3ee4c52b80b5fa",
+    "url": "/text-editor-app/static/js/main.301372fc.chunk.js"
   },
   {
     "revision": "e71841a60b89d4111e78",
