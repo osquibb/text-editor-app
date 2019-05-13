@@ -72,6 +72,11 @@ export default class TextEditorApp extends Component {
     return (
       <Fragment>
         <Container>
+          <Row className="mt-4 text-center">
+            <Col>
+              <h2 style={{fontVariant: 'small-caps'}}>Text Editor</h2>
+            </Col>
+          </Row>
           <Row>
             <Col xs="8">
               <EditorCell editorState={this.state.editorState} onChange={this.onChange} />
