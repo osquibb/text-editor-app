@@ -73,14 +73,15 @@ export default class TextEditorApp extends Component {
       <Fragment>
         <Container>
           <Row>
-            <Col xs="6">
+            <Col xs="8">
               <EditorCell editorState={this.state.editorState} onChange={this.onChange} />
             </Col>
-            <Col xs="2" className="mt-5 text-center">
+            <Col xs="4" className="mt-5 text-center" style={{display: 'flex', alignItems: 'center'}}>
               <SaveButton onClick={this.toggleModal} />
             </Col>
-            <Col xs="4">
+            <Col xs="4 mt-5">
               <SavedDocs savedDocs={this.state.savedDocs}
+                      
                          loadDoc={this.loadDoc}
                          deleteDoc={this.deleteDoc}
                          currentDocKey={this.state.currentDocKey} 

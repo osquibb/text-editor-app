@@ -4,10 +4,10 @@ import { Button } from 'reactstrap';
 
 function SaveButton(props) {
   return (
-    <Button onClick={props.onClick} color="secondary" outline style={{borderColor: "white"}}>
-      <div className="font-weight-light">Save</div>
-      <div className="fa fa-arrow-circle-right fa-3x"></div>
-    </Button>
+    <button onClick={props.onClick} className='format-button'>
+      <h5>Save</h5>
+      <div className="fa fa-save fa-3x"></div>
+    </button>
   );
 }
 

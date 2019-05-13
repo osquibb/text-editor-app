@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #1A163D;
+  background-color: #F7F7F5;
+  font-weight: 100;
+  text-align: center;
+}
+
+.format-button {
+  padding: 6px 10px;
+  border: 1px solid #1A163D;
+  background-color: white;
+  font-variant: small-caps;
+}
+
+.format-button:hover {
+  box-shadow: 3px 3px #1A163D;
+  transition: box-shadow 0.2s ease-in-out;
+}

@@ -6,6 +6,7 @@ import 'draft-js/dist/Draft.css'
 export default class EditorCell extends Component {
   constructor(props) {
     super(props);
+    this.state = {editorHover: false};
     this.handleKeyCommand = this.handleKeyCommand.bind(this);
   }
 
@@ -39,35 +40,44 @@ export default class EditorCell extends Component {
 
     return (
       <Container>
-        <Row>
-          <Col xs="2" style={{marginLeft: "-4%"}}>
-            <Button color="none" 
-                    className={currentStyles.has('BOLD') ? "text-info font-weight-bold" : "text-info font-weight-light"} 
-                    block 
-                    onMouseDown={this._onBoldClick.bind(this)}>
+        <Row className="mt-3">
+          <Col xs="3">
+            <button className='format-button'
+                    onMouseDown={this._onBoldClick.bind(this)}
+                    style= {{backgroundColor: currentStyles.has('BOLD') ? "#FFFBC7" : null}}
+            >
               Bold
-            </Button>
+            </button>
           </Col>
-          <Col xs="2" className="ml-2 mr-2">
-            <Button color="none" 
-                    block 
-                    className={currentStyles.has('ITALIC') ? "text-info font-italic" : "text-info font-weight-light"} 
-                    onMouseDown={this._onItalicClick.bind(this)}>
+          <Col xs="3" className="ml-2 mr-2">
+            <button className="format-button"
+                    onMouseDown={this._onItalicClick.bind(this)}
+                    style= {{backgroundColor: currentStyles.has('ITALIC') ? "#FFFBC7" : null}}
+            >
               Italic
-            </Button>
+            </button>
           </Col>
-          <Col xs="2">
-            <Button color="none" 
-                    block 
-                    className="text-info font-weight-light"
-                    onMouseDown={this._onUnderlineClick.bind(this)}>
-              {currentStyles.has('UNDERLINE') ? <u>Underline</u> : "Underline"}
-            </Button>
+          <Col xs="3" >
+            <button className="format-button"
+                    onMouseDown={this._onUnderlineClick.bind(this)}
+                    style= {{backgroundColor: currentStyles.has('UNDERLINE') ? "#FFFBC7" : null}}
+            >
+              Underline
+            </button>
           </Col>
         </Row>
-        <Row>
-          <Col xs="12" style={{height: "160px", border: "1px solid #e8e8e8"}}>
+        <Row className="mt-3">
+          <Col xs="12" onClick={() => this.editor.focus()}
+                       style={{minHeight: "160px", 
+                               border: "1px solid #1A163D",
+                               backgroundColor: 'white',
+                               padding: '5px 8px',
+                               boxShadow: '3px 3px #1A163D',
+                               cursor: 'text'
+                              }}>
             <Editor
+              className='editor-cell'
+              ref={editor => this.editor = editor}
               placeholder="Type away..."
               editorState={this.props.editorState}
               handleKeyCommand={this.handleKeyCommand}
