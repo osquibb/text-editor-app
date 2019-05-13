@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Editor, RichUtils} from 'draft-js';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import 'draft-js/dist/Draft.css'
 
 export default class EditorCell extends Component {

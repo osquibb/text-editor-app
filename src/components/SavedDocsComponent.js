@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Container, Col, Row, ListGroup, ListGroupItem } from 'reactstrap';
+import { Container, Col, Row, ListGroup, ListGroupItem } from 'reactstrap';
 
 class SavedDocsList extends Component {
 
