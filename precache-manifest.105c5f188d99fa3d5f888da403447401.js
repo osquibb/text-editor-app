@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "18c53ed65fcf932945001065c5715698",
+    "revision": "2dbaa964aabc61512d5e9bfd199073cd",
     "url": "/text-editor-app/index.html"
   },
   {
-    "revision": "74ed8537c6d3cf7f3a72",
+    "revision": "df625dfcaed1e7eec30b",
     "url": "/text-editor-app/static/css/2.7daadf64.chunk.css"
   },
   {
-    "revision": "32ab5b3ee4c52b80b5fa",
-    "url": "/text-editor-app/static/css/main.795991f2.chunk.css"
+    "revision": "8c9ed38a9d09a2317fc2",
+    "url": "/text-editor-app/static/css/main.a1d5b733.chunk.css"
   },
   {
-    "revision": "74ed8537c6d3cf7f3a72",
-    "url": "/text-editor-app/static/js/2.90535e87.chunk.js"
+    "revision": "df625dfcaed1e7eec30b",
+    "url": "/text-editor-app/static/js/2.3e5ada54.chunk.js"
   },
   {
-    "revision": "32ab5b3ee4c52b80b5fa",
-    "url": "/text-editor-app/static/js/main.301372fc.chunk.js"
+    "revision": "8c9ed38a9d09a2317fc2",
+    "url": "/text-editor-app/static/js/main.1e4cc3b2.chunk.js"
   },
   {
     "revision": "e71841a60b89d4111e78",

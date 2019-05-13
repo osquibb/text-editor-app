@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/text-editor-app/static/css/main.795991f2.chunk.css",
-    "main.js": "/text-editor-app/static/js/main.301372fc.chunk.js",
-    "main.js.map": "/text-editor-app/static/js/main.301372fc.chunk.js.map",
+    "main.css": "/text-editor-app/static/css/main.a1d5b733.chunk.css",
+    "main.js": "/text-editor-app/static/js/main.1e4cc3b2.chunk.js",
+    "main.js.map": "/text-editor-app/static/js/main.1e4cc3b2.chunk.js.map",
     "runtime~main.js": "/text-editor-app/static/js/runtime~main.35563332.js",
     "runtime~main.js.map": "/text-editor-app/static/js/runtime~main.35563332.js.map",
     "static/css/2.7daadf64.chunk.css": "/text-editor-app/static/css/2.7daadf64.chunk.css",
-    "static/js/2.90535e87.chunk.js": "/text-editor-app/static/js/2.90535e87.chunk.js",
-    "static/js/2.90535e87.chunk.js.map": "/text-editor-app/static/js/2.90535e87.chunk.js.map",
+    "static/js/2.3e5ada54.chunk.js": "/text-editor-app/static/js/2.3e5ada54.chunk.js",
+    "static/js/2.3e5ada54.chunk.js.map": "/text-editor-app/static/js/2.3e5ada54.chunk.js.map",
     "index.html": "/text-editor-app/index.html",
-    "precache-manifest.3da8b2f7297f1dea5ad77da6b9657f3c.js": "/text-editor-app/precache-manifest.3da8b2f7297f1dea5ad77da6b9657f3c.js",
+    "precache-manifest.105c5f188d99fa3d5f888da403447401.js": "/text-editor-app/precache-manifest.105c5f188d99fa3d5f888da403447401.js",
     "service-worker.js": "/text-editor-app/service-worker.js",
     "static/css/2.7daadf64.chunk.css.map": "/text-editor-app/static/css/2.7daadf64.chunk.css.map",
-    "static/css/main.795991f2.chunk.css.map": "/text-editor-app/static/css/main.795991f2.chunk.css.map",
+    "static/css/main.a1d5b733.chunk.css.map": "/text-editor-app/static/css/main.a1d5b733.chunk.css.map",
     "static/media/font-awesome.min.css": "/text-editor-app/static/media/fontawesome-webfont.fee66e71.woff"
   }
 }
